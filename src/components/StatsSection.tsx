@@ -1,8 +1,8 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 
 const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const [counters, setCounters] = useState({
     countries: 0,
     partners: 0,
@@ -26,11 +26,12 @@ const StatsSection = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
           setIsVisible(true);
+          setHasAnimated(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -38,10 +39,10 @@ const StatsSection = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [hasAnimated]);
 
   useEffect(() => {
-    if (isVisible) {
+    if (isVisible && !hasAnimated) {
       const duration = 2000; // 2 seconds
       const steps = 60;
       const stepDuration = duration / steps;
@@ -68,7 +69,7 @@ const StatsSection = () => {
 
       return () => clearInterval(timer);
     }
-  }, [isVisible]);
+  }, [isVisible, hasAnimated]);
 
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat().format(num);
