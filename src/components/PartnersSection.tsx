@@ -15,8 +15,11 @@ const PartnersSection = () => {
     { name: 'Faragello', logo: 'FARAGELLO' },
   ];
 
+  // Duplicate the partners array for seamless looping
+  const duplicatedPartners = [...partners, ...partners];
+
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
@@ -27,19 +30,26 @@ const PartnersSection = () => {
           </p>
         </div>
 
-        {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {partners.map((partner, index) => (
-            <div
-              key={partner.name}
-              className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center h-24 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="font-poppins font-semibold text-gray-700 text-center">
-                {partner.logo}
-              </div>
+        {/* Marquee Container */}
+        <div className="relative mb-12">
+          <div className="flex overflow-hidden">
+            <div className="flex animate-marquee hover:animation-pause">
+              {duplicatedPartners.map((partner, index) => (
+                <div
+                  key={`${partner.name}-${index}`}
+                  className="flex-shrink-0 mx-8 w-32 h-24 bg-white rounded-lg shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group"
+                >
+                  <div className="font-poppins font-semibold text-gray-400 text-center group-hover:text-primary transition-colors duration-300">
+                    {partner.logo}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          
+          {/* Gradient overlays for smooth fade effect */}
+          <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
+          <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10"></div>
         </div>
 
         {/* CTA */}
