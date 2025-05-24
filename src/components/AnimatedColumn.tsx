@@ -8,26 +8,22 @@ interface AnimatedColumnProps {
   duration: number;
 }
 
-const AnimatedColumn: React.FC<AnimatedColumnProps> = ({ 
-  images, 
-  direction, 
-  duration 
+const AnimatedColumn: React.FC<AnimatedColumnProps> = ({
+  images,
+  direction,
+  duration
 }) => {
-  // Duplicate images to allow seamless looping
-  const duplicatedImages = [...images, ...images];
+  const scrollDirection = direction === 'up' ? '-100%' : '100%';
 
   return (
     <div className="relative h-full overflow-hidden">
       {/* Top gradient mask */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-50 to-transparent z-10 pointer-events-none" />
-
       {/* Bottom gradient mask */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10 pointer-events-none" />
 
       <motion.div
-        animate={{
-          y: direction === 'up' ? ['0%', '-100%'] : ['0%', '100%'],
-        }}
+        animate={{ y: [ '0%', scrollDirection ] }}
         transition={{
           duration,
           ease: 'linear',
@@ -35,7 +31,8 @@ const AnimatedColumn: React.FC<AnimatedColumnProps> = ({
         }}
         className="flex flex-col gap-4"
       >
-        {duplicatedImages.map((image, index) => (
+        {/* Duplicate the list */}
+        {[...images, ...images].map((image, index) => (
           <div
             key={`${image.src}-${index}`}
             className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
