@@ -5,14 +5,12 @@ import { Link } from 'react-router-dom';
 
 const PartnersSection = () => {
   const partners = [
-    { name: 'IFFCO', logo: '/images/logos/iffco-logo.png' },
-    { name: 'Almasria', logo: '/images/logos/almasria-logo.png' },
-    { name: 'Aujan', logo: '/images/logos/aujan-logo.png' },
-    { name: 'Almosim', logo: '/images/logos/almosim-logo.png' },
-    { name: 'Rani', logo: '/images/logos/rani-logo.png' },
-    { name: 'Barbican', logo: '/images/logos/barbican-logo.png' },
-    { name: 'Hub', logo: '/images/logos/hub-logo.png' },
-    { name: 'Faragello', logo: '/images/logos/faragello-logo.png' },
+    { name: 'IFFCO', logo: '/lovable-uploads/f19006fd-aff1-4942-9817-a7c370afe483.png' },
+    { name: 'Aujan', logo: '/lovable-uploads/7a05c478-018d-4b48-b598-fb53a53bb344.png' },
+    { name: 'Rani', logo: '/lovable-uploads/10ad29dd-6ed0-4e12-993b-3b6073c9d216.png' },
+    { name: 'Barbican', logo: '/lovable-uploads/8c0046a4-b903-41d1-aec8-fb1b70aa89dc.png' },
+    { name: 'Hub', logo: '/lovable-uploads/3189d8a5-d3d6-42d4-977b-dfd45302b245.png' },
+    { name: 'Faragello', logo: '/lovable-uploads/5866d219-08c5-4051-ac76-24cff712cb4a.png' },
   ];
 
   // Duplicate the partners array for seamless looping
