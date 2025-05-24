@@ -2,10 +2,11 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PartnersSection from '@/components/PartnersSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Globe, Truck, Shield, Users, Target, ArrowRight } from 'lucide-react';
+import { CheckCircle, Globe, Truck, Shield, Users, Target, ArrowRight, ClipboardCheck, FileText, Warehouse, Network } from 'lucide-react';
 
 const Partnerships = () => {
   const partnershipTypes = [
@@ -92,6 +93,34 @@ const Partnerships = () => {
       icon: Users,
       title: "Local Presence",
       description: "On-ground teams with local knowledge and relationship networks"
+    },
+    {
+      icon: Truck,
+      title: "Full Supply Chain Support",
+      description: "End-to-end logistics solutions from import to final delivery"
+    }
+  ];
+
+  const logisticsCapabilities = [
+    {
+      icon: ClipboardCheck,
+      title: "Customs Clearance",
+      description: "Expert handling of all customs procedures and regulatory compliance"
+    },
+    {
+      icon: FileText,
+      title: "Documentation",
+      description: "Complete documentation management for seamless import/export"
+    },
+    {
+      icon: Warehouse,
+      title: "Warehousing",
+      description: "Strategic storage facilities with specialized handling capabilities"
+    },
+    {
+      icon: Network,
+      title: "Distribution Networks",
+      description: "Comprehensive last-mile delivery across multiple African markets"
     }
   ];
 
@@ -108,13 +137,20 @@ const Partnerships = () => {
             </h1>
             <p className="font-dm-sans text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Join forces with Trillioni Chad to expand your reach across Africa. 
-              We offer comprehensive import/export guidance and logistics support.
+              We provide strategic import/export guidance, local expertise, and end-to-end logistics support.
             </p>
-            <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
-                Start Partnership Discussion
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
+                  Schedule Consultation
+                </Button>
+              </Link>
+              <Link to="/products">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
+                  View Our Products
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -124,11 +160,10 @@ const Partnerships = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
-              Partnership Types
+              Find Your Fit
             </h2>
             <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you're a global brand, logistics provider, or local retailer, 
-              we have partnership opportunities tailored to your needs.
+              Tailored partnership models for global brands, logistics experts, and local retailers.
             </p>
           </div>
 
@@ -173,7 +208,7 @@ const Partnerships = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {whyPartner.map((reason, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-md">
@@ -191,6 +226,9 @@ const Partnerships = () => {
         </div>
       </section>
 
+      {/* Trusted Brands Logo Slider */}
+      <PartnersSection />
+
       {/* Partnership Process */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +243,6 @@ const Partnerships = () => {
           </div>
 
           <div className="relative">
-            {/* Process Steps */}
             <div className="space-y-8">
               {partnershipProcess.map((process, index) => (
                 <div key={index} className="flex items-start">
@@ -234,71 +271,60 @@ const Partnerships = () => {
         </div>
       </section>
 
-      {/* Import/Export Services */}
-      <section className="py-16 bg-primary text-white">
+      {/* Import/Export & Logistics Capabilities */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-poppins font-bold text-3xl mb-6">
-                Import/Export & Logistics Services
-              </h2>
-              <div className="space-y-4 font-dm-sans text-lg leading-relaxed opacity-90">
-                <p>
-                  Navigate the complexities of African trade with our comprehensive 
-                  import/export and logistics solutions. From regulatory compliance 
-                  to last-mile delivery, we handle every aspect of your supply chain.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-accent mr-3" />
-                    <span className="text-sm">Customs clearance</span>
+          <div className="text-center mb-12">
+            <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+              Import/Export & Logistics Capabilities
+            </h2>
+            <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive solutions for seamless trade operations across Africa
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {logisticsCapabilities.map((capability, index) => (
+              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                <CardContent className="p-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <capability.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-accent mr-3" />
-                    <span className="text-sm">Documentation handling</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-accent mr-3" />
-                    <span className="text-sm">Warehousing solutions</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-accent mr-3" />
-                    <span className="text-sm">Distribution networks</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                alt="Logistics and partnership operations"
-                className="w-full h-96 object-cover rounded-lg shadow-xl"
-              />
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-accent rounded-lg opacity-20"></div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-lg opacity-20"></div>
-            </div>
+                  <h3 className="font-poppins font-semibold text-lg text-gray-900 mb-3">
+                    {capability.title}
+                  </h3>
+                  <p className="font-dm-sans text-sm text-gray-600">
+                    {capability.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gray-50">
+      {/* Final CTA Section */}
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-6">
+          <h2 className="font-poppins font-bold text-3xl mb-6">
             Ready to Expand Across Africa?
           </h2>
-          <p className="font-dm-sans text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Partner with Trillioni Chad and leverage our expertise, network, and 
-            commitment to drive your success across African markets.
+          <p className="font-dm-sans text-lg mb-8 max-w-2xl mx-auto opacity-90">
+            Let's build something scalable and impactful together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
+              <Button className="bg-accent hover:bg-accent/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
                 Schedule Consultation
               </Button>
             </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg">
+                Become a Partner
+              </Button>
+            </Link>
             <Link to="/products">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg">
                 View Our Products
               </Button>
             </Link>
