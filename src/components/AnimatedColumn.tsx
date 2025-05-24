@@ -13,7 +13,10 @@ const AnimatedColumn: React.FC<AnimatedColumnProps> = ({
   direction,
   duration
 }) => {
-  const scrollDirection = direction === 'up' ? '-100%' : '100%';
+  // Fix for seamless infinite scroll in both directions
+  const isUp = direction === 'up';
+  const initialY = isUp ? '0%' : '-50%';
+  const animateY = isUp ? '-50%' : '0%';
 
   return (
     <div className="relative h-full overflow-hidden">
@@ -21,13 +24,15 @@ const AnimatedColumn: React.FC<AnimatedColumnProps> = ({
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-50 to-transparent z-10 pointer-events-none" />
       {/* Bottom gradient mask */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10 pointer-events-none" />
-
+      
       <motion.div
-        animate={{ y: [ '0%', scrollDirection ] }}
+        initial={{ y: initialY }}
+        animate={{ y: animateY }}
         transition={{
           duration,
           ease: 'linear',
           repeat: Infinity,
+          repeatType: 'loop',
         }}
         className="flex flex-col gap-4"
       >

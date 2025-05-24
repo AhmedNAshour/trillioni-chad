@@ -4,7 +4,7 @@ import { galleryImages } from '@/data/galleryImages';
 import { distributeImages } from '@/utils/galleryUtils';
 
 const CommunityGallery = () => {
-  const desktopColumns = distributeImages(galleryImages, 5);
+  const desktopColumns = distributeImages(galleryImages, 3); // Changed from 5 to 3
   const mobileColumns = distributeImages(galleryImages, 2);
 
   return (
@@ -18,8 +18,8 @@ const CommunityGallery = () => {
             Witness the transformative power of community partnership through these moments.
           </p>
         </div>
-
-        {/* Desktop: 5 columns */}
+        
+        {/* Desktop: 3 columns (changed from 5) */}
         <div className="hidden md:flex gap-4 h-[600px] lg:h-[700px]">
           {desktopColumns.map((columnImages, index) => (
             <div key={index} className="flex-1">
@@ -31,7 +31,7 @@ const CommunityGallery = () => {
             </div>
           ))}
         </div>
-
+        
         {/* Mobile: 2 columns */}
         <div className="md:hidden flex gap-4 h-[500px] overflow-x-hidden">
           {mobileColumns.map((columnImages, index) => (
