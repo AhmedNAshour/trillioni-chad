@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GalleryImage } from '@/data/galleryImages';
@@ -14,31 +13,27 @@ const AnimatedColumn: React.FC<AnimatedColumnProps> = ({
   direction, 
   duration 
 }) => {
-  // Duplicate images for seamless infinite scroll
+  // Duplicate images to allow seamless looping
   const duplicatedImages = [...images, ...images];
-  
+
   return (
     <div className="relative h-full overflow-hidden">
       {/* Top gradient mask */}
       <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-50 to-transparent z-10 pointer-events-none" />
-      
+
       {/* Bottom gradient mask */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent z-10 pointer-events-none" />
-      
+
       <motion.div
         animate={{
-          y: direction === 'up' ? [0, -50] : [0, 50]
+          y: direction === 'up' ? ['0%', '-100%'] : ['0%', '100%'],
         }}
         transition={{
           duration,
           ease: 'linear',
           repeat: Infinity,
-          values: direction === 'up' ? [0, -50] : [0, 50]
         }}
         className="flex flex-col gap-4"
-        style={{
-          height: '200%'
-        }}
       >
         {duplicatedImages.map((image, index) => (
           <div
