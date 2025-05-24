@@ -87,7 +87,7 @@ const CommunityGallery = () => {
     }
   ];
 
-  // Distribute images into 5 columns for desktop, 2 for mobile
+  // Distribute images into columns
   const distributeImages = (images: typeof galleryImages, numColumns: number) => {
     const columns = Array.from({ length: numColumns }, () => [] as typeof galleryImages);
     images.forEach((image, index) => {
@@ -121,14 +121,18 @@ const CommunityGallery = () => {
         
         <motion.div
           animate={{
-            y: direction === 'up' ? ['0%', '-50%'] : ['0%', '50%']
+            y: direction === 'up' ? [0, -50] : [0, 50]
           }}
           transition={{
             duration,
             ease: 'linear',
             repeat: Infinity,
+            values: direction === 'up' ? [0, -50] : [0, 50]
           }}
           className="flex flex-col gap-4"
+          style={{
+            height: '200%'
+          }}
         >
           {duplicatedImages.map((image, index) => (
             <div
@@ -176,7 +180,7 @@ const CommunityGallery = () => {
               <AnimatedColumn
                 images={columnImages}
                 direction={index % 2 === 0 ? 'up' : 'down'}
-                duration={20 + index * 2} // Varying speeds: 20s, 22s, 24s, 26s, 28s
+                duration={20 + index * 2}
               />
             </div>
           ))}
@@ -189,7 +193,7 @@ const CommunityGallery = () => {
               <AnimatedColumn
                 images={columnImages}
                 direction={index % 2 === 0 ? 'up' : 'down'}
-                duration={25 + index * 3} // 25s and 28s for mobile
+                duration={25 + index * 3}
               />
             </div>
           ))}
