@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const PartnersSection = () => {
   const partners = [
-    { name: 'IFFCO', logo: 'IFFCO' },
-    { name: 'Almasria', logo: 'ALMASRIA' },
-    { name: 'Aujan', logo: 'AUJAN' },
-    { name: 'Almosim', logo: 'ALMOSIM' },
-    { name: 'Rani', logo: 'RANI' },
-    { name: 'Barbican', logo: 'BARBICAN' },
-    { name: 'Hub', logo: 'HUB' },
-    { name: 'Faragello', logo: 'FARAGELLO' },
+    { name: 'IFFCO', logo: '/images/logos/iffco-logo.png' },
+    { name: 'Almasria', logo: '/images/logos/almasria-logo.png' },
+    { name: 'Aujan', logo: '/images/logos/aujan-logo.png' },
+    { name: 'Almosim', logo: '/images/logos/almosim-logo.png' },
+    { name: 'Rani', logo: '/images/logos/rani-logo.png' },
+    { name: 'Barbican', logo: '/images/logos/barbican-logo.png' },
+    { name: 'Hub', logo: '/images/logos/hub-logo.png' },
+    { name: 'Faragello', logo: '/images/logos/faragello-logo.png' },
   ];
 
   // Duplicate the partners array for seamless looping
@@ -39,9 +39,11 @@ const PartnersSection = () => {
                   key={`${partner.name}-${index}`}
                   className="flex-shrink-0 mx-8 w-32 h-24 bg-white rounded-lg shadow-md flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg group"
                 >
-                  <div className="font-poppins font-semibold text-gray-400 text-center group-hover:text-primary transition-colors duration-300">
-                    {partner.logo}
-                  </div>
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 p-2"
+                  />
                 </div>
               ))}
             </div>
