@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 
 const StatsSection = () => {
@@ -28,7 +29,6 @@ const StatsSection = () => {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           setIsVisible(true);
-          setHasAnimated(true);
         }
       },
       { threshold: 0.3 }
@@ -64,6 +64,7 @@ const StatsSection = () => {
         if (currentStep >= steps) {
           clearInterval(timer);
           setCounters(finalValues);
+          setHasAnimated(true); // Set hasAnimated only after animation completes
         }
       }, stepDuration);
 
