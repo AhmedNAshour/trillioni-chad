@@ -20,12 +20,12 @@ const PartnershipCTA = () => {
             </Button>
           </Link>
           <Link to="/contact">
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300 bg-transparent">
               Become a Partner
             </Button>
           </Link>
           <Link to="/products">
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300 bg-transparent">
               View Our Products
             </Button>
           </Link>

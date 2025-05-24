@@ -8,22 +8,26 @@ const LogisticsCapabilities = () => {
     {
       icon: ClipboardCheck,
       title: "Customs Clearance",
-      description: "Expert handling of all customs procedures and regulatory compliance"
+      description: "Expert handling of all customs procedures and regulatory compliance",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: FileText,
       title: "Documentation",
-      description: "Complete documentation management for seamless import/export"
+      description: "Complete documentation management for seamless import/export",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: Warehouse,
       title: "Warehousing",
-      description: "Strategic storage facilities with specialized handling capabilities"
+      description: "Strategic storage facilities with specialized handling capabilities",
+      image: "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       icon: Network,
       title: "Distribution Networks",
-      description: "Comprehensive last-mile delivery across multiple African markets"
+      description: "Comprehensive last-mile delivery across multiple African markets",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -41,11 +45,18 @@ const LogisticsCapabilities = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {logisticsCapabilities.map((capability, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <capability.icon className="w-8 h-8 text-primary" />
+            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 text-center overflow-hidden group">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={capability.image} 
+                  alt={capability.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <capability.icon className="w-12 h-12 text-white" />
                 </div>
+              </div>
+              <CardContent className="p-6">
                 <h3 className="font-poppins font-semibold text-lg text-gray-900 mb-3">
                   {capability.title}
                 </h3>
