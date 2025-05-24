@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -195,14 +194,26 @@ const Partnerships = () => {
         </div>
       </section>
 
-      {/* Why Partner With Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Why Partner With Us - WITH PARALLAX BACKGROUND */}
+      <section className="py-16 relative overflow-hidden">
+        {/* Parallax Background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+          }}
+        ></div>
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-primary/90"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h2 className="font-poppins font-bold text-3xl text-white mb-4">
               Why Partner With Trillioni Chad?
             </h2>
-            <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="font-dm-sans text-lg text-gray-200 max-w-2xl mx-auto">
               Our expertise, network, and commitment to excellence make us the ideal 
               partner for your African market expansion.
             </p>
@@ -211,13 +222,13 @@ const Partnerships = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {whyPartner.map((reason, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white rounded-lg mx-auto mb-4 flex items-center justify-center shadow-md">
-                  <reason.icon className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-lg mx-auto mb-4 flex items-center justify-center shadow-md">
+                  <reason.icon className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-poppins font-semibold text-lg text-gray-900 mb-3">
+                <h3 className="font-poppins font-semibold text-lg text-white mb-3">
                   {reason.title}
                 </h3>
-                <p className="font-dm-sans text-sm text-gray-600">
+                <p className="font-dm-sans text-sm text-gray-200">
                   {reason.description}
                 </p>
               </div>
@@ -314,17 +325,17 @@ const Partnerships = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button className="bg-accent hover:bg-accent/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg">
+              <Button className="bg-accent hover:bg-accent/90 text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg">
                 Schedule Consultation
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                 Become a Partner
               </Button>
             </Link>
             <Link to="/products">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300">
                 View Our Products
               </Button>
             </Link>
