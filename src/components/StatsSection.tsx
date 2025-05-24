@@ -95,17 +95,17 @@ const StatsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="text-center transform transition-all duration-300 hover:scale-105"
+              className="text-center transform transition-all duration-300 hover:scale-105 px-2"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="font-poppins font-bold text-3xl sm:text-4xl lg:text-5xl mb-2 text-accent">
+              <div className="font-poppins font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-2 text-accent break-words">
                 {formatNumber(stat.value)}{stat.suffix}
               </div>
-              <div className="font-dm-sans text-sm sm:text-base opacity-90">
+              <div className="font-dm-sans text-xs sm:text-sm lg:text-base opacity-90 break-words">
                 {stat.label}
               </div>
             </div>
