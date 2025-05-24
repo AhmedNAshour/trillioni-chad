@@ -1,4 +1,3 @@
-
 import React from 'react';
 import AnimatedColumn from './AnimatedColumn';
 import { galleryImages } from '@/data/galleryImages';
@@ -16,7 +15,7 @@ const CommunityGallery = () => {
             Our Impact in Action
           </h2>
           <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
-            Witness the transformative power of community partnership through these moments
+            Witness the transformative power of community partnership through these moments.
           </p>
         </div>
 
