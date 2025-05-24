@@ -1,7 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
 
 const CommunityGallery = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const galleryImages = [
     {
       src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -57,51 +61,64 @@ const CommunityGallery = () => {
           </p>
         </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-            >
-              <img
-                src={image.src}
-                alt={image.caption}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <span className="inline-block px-2 py-1 bg-primary/80 rounded text-xs font-dm-sans font-semibold mb-2">
-                    {image.category}
-                  </span>
-                  <p className="font-dm-sans text-sm">{image.caption}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Tinder-style Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => (
+                <CarouselItem 
+                  key={index} 
+                  className="pl-2 md:pl-4 basis-4/5 md:basis-2/5 lg:basis-1/3"
+                >
+                  <div className="p-1">
+                    <Card className="group relative overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105">
+                      <CardContent className="p-0">
+                        <div className="relative">
+                          <img
+                            src={image.src}
+                            alt={image.caption}
+                            className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                              <span className="inline-block px-3 py-1 bg-primary/90 rounded-full text-xs font-dm-sans font-semibold mb-3">
+                                {image.category}
+                              </span>
+                              <p className="font-dm-sans text-sm md:text-base leading-relaxed">
+                                {image.caption}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 border-primary/20 hover:bg-primary hover:text-white" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white/90 border-primary/20 hover:bg-primary hover:text-white" />
+          </Carousel>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden">
-          <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
-            {galleryImages.map((image, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-80 relative overflow-hidden rounded-xl shadow-lg"
-              >
-                <img
-                  src={image.src}
-                  alt={image.caption}
-                  className="w-full h-64 object-cover"
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center mt-6 md:hidden">
+            <div className="flex space-x-2">
+              {galleryImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-primary w-6' : 'bg-gray-300'
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                  <span className="inline-block px-2 py-1 bg-primary/80 rounded text-xs font-dm-sans font-semibold mb-2">
-                    {image.category}
-                  </span>
-                  <p className="font-dm-sans text-sm">{image.caption}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
