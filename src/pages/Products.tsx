@@ -1,25 +1,35 @@
-
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ProductsHero from '@/components/products/ProductsHero';
+import ByTrillioni from '@/components/products/ByTrillioni';
+import OtherBrands from '@/components/products/OtherBrands';
+import CategoryGrid from '@/components/products/CategoryGrid';
+import CategoryPage from '@/components/products/CategoryPage';
 
 const Products = () => {
+  const { category } = useParams();
+
+  // If we have a category parameter, show the category page
+  if (category) {
+    return (
+      <div className="min-h-screen">
+        <Navigation />
+        <CategoryPage category={category} />
+        <Footer />
+      </div>
+    );
+  }
+
+  // Otherwise show the main products page
   return (
     <div className="min-h-screen">
       <Navigation />
-      <div className="pt-16 min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center max-w-2xl mx-auto px-4">
-          <h1 className="font-poppins font-bold text-4xl text-gray-900 mb-4">Our Products</h1>
-          <p className="font-dm-sans text-lg text-gray-600 mb-8">
-            Explore our comprehensive product catalog across four key categories.
-          </p>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="font-dm-sans text-gray-600">
-              Product category pages and detailed product listings coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
+      <ProductsHero />
+      <ByTrillioni />
+      <OtherBrands />
+      <CategoryGrid />
       <Footer />
     </div>
   );
