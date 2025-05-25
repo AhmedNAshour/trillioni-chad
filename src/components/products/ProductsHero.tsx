@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -222,7 +223,7 @@ const ProductsHero = () => {
               </Button>
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* Animated Scroll Indicator */}
