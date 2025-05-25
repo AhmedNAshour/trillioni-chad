@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -85,7 +86,7 @@ const ByTrillioni = () => {
     return () => clearInterval(interval);
   }, [isAutoPlay, isPaused, products.length]);
 
-  const handleProductChange = (index) => {
+  const handleProductChange = (index: number) => {
     setCurrentProduct(index);
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 3000); // Resume after 3 seconds
@@ -304,7 +305,7 @@ const ByTrillioni = () => {
               {isAutoPlay ? 'Pause' : 'Play'}
             </span>
           </motion.button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
