@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -9,9 +8,9 @@ const ProductsHero = () => {
   const [mounted, setMounted] = useState(false);
   const { scrollY } = useScroll();
   
-  // Parallax transforms
-  const backgroundY = useTransform(scrollY, [0, 800], [0, -200]);
-  const textY = useTransform(scrollY, [0, 800], [0, -100]);
+  // Parallax transforms - reduced intensity to prevent white gaps
+  const backgroundY = useTransform(scrollY, [0, 800], [0, -100]);
+  const textY = useTransform(scrollY, [0, 800], [0, -50]);
   const overlayOpacity = useTransform(scrollY, [0, 400], [0.3, 0.8]);
 
   useEffect(() => {
@@ -39,12 +38,12 @@ const ProductsHero = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <motion.div 
-        className="absolute inset-0"
+        className="absolute inset-0 scale-110"
         style={{ y: backgroundY }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#7a1010] via-[#7a1010]/90 to-[#7a1010]/70">
           <motion.div 
-            className="w-full h-full bg-cover bg-center"
+            className="w-full h-full bg-cover bg-center scale-110"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80')`,
               opacity: overlayOpacity
@@ -222,13 +221,13 @@ const ProductsHero = () => {
                 </motion.span>
               </Button>
             </Link>
-          </motion.div>
+            </motion.div>
         </motion.div>
       </motion.div>
 
       {/* Animated Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white cursor-pointer"
+        className="absolute bottom-8 left-0 right-0 flex justify-center text-white cursor-pointer"
         onClick={scrollToCategories}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
