@@ -269,15 +269,62 @@ const OtherBrands = () => {
                     </div>
                   </div>
 
-                  {/* Hover Details */}
+                  {/* Hover Details - Always visible on mobile, hover on desktop */}
+                  <div className="block sm:hidden">
+                    {/* Mobile: Always show key details */}
+                    <div className="border-t pt-4 space-y-3">
+                      {/* Packaging */}
+                      <div>
+                        <h5 className="font-dm-sans font-semibold text-xs text-gray-700 mb-1 flex items-center gap-1">
+                          <Truck className="w-3 h-3" />
+                          Packaging
+                        </h5>
+                        <div className="flex flex-wrap gap-1">
+                          {brand.packaging.slice(0, 2).map((pkg, idx) => (
+                            <span key={idx} className="text-xs text-gray-600 bg-gray-50 px-2 py-1 rounded">
+                              {pkg}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Certifications */}
+                      <div>
+                        <h5 className="font-dm-sans font-semibold text-xs text-gray-700 mb-1 flex items-center gap-1">
+                          <Award className="w-3 h-3" />
+                          Certifications
+                        </h5>
+                        <div className="flex flex-wrap gap-1">
+                          {brand.certifications.slice(0, 2).map((cert, idx) => (
+                            <span key={idx} className="text-xs text-green-700 bg-green-50 px-2 py-1 rounded flex items-center gap-1">
+                              <CheckCircle className="w-3 h-3" />
+                              {cert}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Availability */}
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-dm-sans font-medium text-gray-700 flex items-center gap-1">
+                          <Globe className="w-4 h-4 text-[#7a1010]" />
+                          Availability
+                        </span>
+                        <span className="text-gray-600 text-xs">{brand.availability}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Desktop: Hover to reveal details */}
                   <motion.div
+                    className="hidden sm:block"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ 
                       opacity: hoveredBrand === `${activeCategory}-${index}` ? 1 : 0,
                       height: hoveredBrand === `${activeCategory}-${index}` ? 'auto' : 0
                     }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+                    style={{ overflow: 'hidden' }}
                   >
                     <div className="border-t pt-4 space-y-3">
                       {/* Packaging */}
