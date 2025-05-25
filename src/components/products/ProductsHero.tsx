@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -223,12 +222,12 @@ const ProductsHero = () => {
               </Button>
             </Link>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* Animated Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white cursor-pointer"
         onClick={scrollToCategories}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -240,8 +239,8 @@ const ProductsHero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-xs uppercase tracking-wider font-dm-sans">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+          <span className="text-xs uppercase tracking-wider font-dm-sans text-center">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center items-start">
             <motion.div
               className="w-1 h-3 bg-white rounded-full mt-2"
               animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
