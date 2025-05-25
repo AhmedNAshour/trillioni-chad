@@ -42,7 +42,7 @@ const ProductsHero = () => {
           <Link to="/contact">
             <Button 
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-dm-sans font-semibold px-8 py-3 text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Contact Us
             </Button>

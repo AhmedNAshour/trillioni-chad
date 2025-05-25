@@ -47,6 +47,12 @@ const Navigation = () => {
                   <NavigationMenuContent>
                     <div className="w-48 p-2 bg-white">
                       <NavigationMenuLink asChild>
+                        <Link to="/products" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded font-semibold">
+                          All Products
+                        </Link>
+                      </NavigationMenuLink>
+                      <div className="border-t border-gray-200 my-2"></div>
+                      <NavigationMenuLink asChild>
                         <Link to="/products/beverages" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
                           Beverages
                         </Link>
@@ -115,6 +121,7 @@ const Navigation = () => {
               <div className="px-3 py-2">
                 <div className="text-gray-700 font-dm-sans mb-2">Products</div>
                 <div className="pl-4 space-y-1">
+                  <Link to="/products" className="block py-1 text-sm text-gray-600 hover:text-primary font-semibold">All Products</Link>
                   <Link to="/products/beverages" className="block py-1 text-sm text-gray-600 hover:text-primary">Beverages</Link>
                   <Link to="/products/commodities" className="block py-1 text-sm text-gray-600 hover:text-primary">Commodities</Link>
                   <Link to="/products/necessities" className="block py-1 text-sm text-gray-600 hover:text-primary">Everyday Necessities</Link>
