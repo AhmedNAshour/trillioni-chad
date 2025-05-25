@@ -162,18 +162,18 @@ const OtherBrands = () => {
 
         {/* Category Filter */}
         <motion.div 
-          className="flex justify-center mb-10"
+          className="flex justify-center mb-10 px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex gap-2 p-2 bg-white rounded-xl shadow-lg border">
+          <div className="flex flex-wrap justify-center gap-2 p-2 bg-white rounded-xl shadow-lg border max-w-full">
             {categories.map((category) => (
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-dm-sans font-medium transition-all duration-300 ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-dm-sans font-medium transition-all duration-300 text-sm sm:text-base ${
                   activeCategory === category.id
                     ? 'bg-[#7a1010] text-white shadow-lg'
                     : 'text-gray-600 hover:text-[#7a1010] hover:bg-gray-50'
@@ -181,8 +181,10 @@ const OtherBrands = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {category.label}
-                <span className="ml-2 text-xs opacity-75">({category.count})</span>
+                <span className="whitespace-nowrap">
+                  {category.label}
+                  <span className="ml-1 sm:ml-2 text-xs opacity-75">({category.count})</span>
+                </span>
               </motion.button>
             ))}
           </div>
@@ -190,22 +192,21 @@ const OtherBrands = () => {
 
         {/* Brand Grid */}
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          key={activeCategory} // Force re-render on category change
         >
           {getFilteredBrands().map((brand, index) => (
             <motion.div
-              key={`${brand.name}-${index}`}
-              variants={cardVariants}
-              onHoverStart={() => setHoveredBrand(index)}
+              key={`${activeCategory}-${brand.name}-${brand.origin}`} // Unique key per category
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              onHoverStart={() => setHoveredBrand(`${activeCategory}-${index}`)}
               onHoverEnd={() => setHoveredBrand(null)}
             >
-              <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden bg-white border-0 shadow-lg">
+              <Card className="group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden bg-white border-0 shadow-lg h-full">
                 {/* Brand Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <motion.img
                     src={brand.image}
                     alt={brand.name}
@@ -214,37 +215,37 @@ const OtherBrands = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   
                   {/* Origin Badge */}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-lg">
-                    <div className="flex items-center gap-2 text-sm font-dm-sans font-medium">
-                      <span className="text-base">{brand.originFlag}</span>
+                  <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1 shadow-lg">
+                    <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-dm-sans font-medium">
+                      <span className="text-sm sm:text-base">{brand.originFlag}</span>
                       <span className="text-gray-800">{brand.origin}</span>
                     </div>
                   </div>
 
                   {/* Category Badge */}
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-[#7a1010] text-white">
+                  <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                    <Badge className="bg-[#7a1010] text-white text-xs">
                       {brand.category}
                     </Badge>
                   </div>
 
                   {/* Established Year */}
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="flex items-center gap-1 text-sm">
-                      <Building2 className="w-4 h-4" />
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 text-white">
+                    <div className="flex items-center gap-1 text-xs sm:text-sm">
+                      <Building2 className="w-3 sm:w-4 h-3 sm:h-4" />
                       <span>Est. {brand.established}</span>
                     </div>
                   </div>
                 </div>
 
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
                   {/* Brand Name */}
-                  <h3 className="font-poppins font-bold text-xl text-gray-900 mb-2">
+                  <h3 className="font-poppins font-bold text-lg sm:text-xl text-gray-900 mb-2">
                     {brand.name}
                   </h3>
                   
                   {/* Description */}
-                  <p className="font-dm-sans text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="font-dm-sans text-gray-600 text-sm leading-relaxed mb-4 flex-1">
                     {brand.description}
                   </p>
 
@@ -272,8 +273,8 @@ const OtherBrands = () => {
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ 
-                      opacity: hoveredBrand === index ? 1 : 0,
-                      height: hoveredBrand === index ? 'auto' : 0
+                      opacity: hoveredBrand === `${activeCategory}-${index}` ? 1 : 0,
+                      height: hoveredBrand === `${activeCategory}-${index}` ? 'auto' : 0
                     }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
@@ -316,7 +317,7 @@ const OtherBrands = () => {
                           <Globe className="w-4 h-4 text-[#7a1010]" />
                           Availability
                         </span>
-                        <span className="text-gray-600">{brand.availability}</span>
+                        <span className="text-gray-600 text-xs sm:text-sm">{brand.availability}</span>
                       </div>
                     </div>
                   </motion.div>
@@ -328,7 +329,7 @@ const OtherBrands = () => {
                     whileTap={{ scale: 0.98 }}
                   >
                     <Button 
-                      className="w-full bg-[#7a1010] hover:bg-[#7a1010]/90 text-white font-dm-sans font-medium"
+                      className="w-full bg-[#7a1010] hover:bg-[#7a1010]/90 text-white font-dm-sans font-medium text-sm"
                       size="sm"
                     >
                       <span className="flex items-center gap-2">
@@ -345,16 +346,16 @@ const OtherBrands = () => {
 
         {/* Bottom CTA */}
         <motion.div 
-          className="text-center mt-12 p-8 bg-gradient-to-r from-[#7a1010]/5 to-[#dfdfdf]/20 rounded-2xl"
+          className="text-center mt-12 p-6 sm:p-8 bg-gradient-to-r from-[#7a1010]/5 to-[#dfdfdf]/20 rounded-2xl mx-4 sm:mx-0"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-3">
+          <h3 className="font-poppins font-bold text-xl sm:text-2xl text-gray-900 mb-3">
             Partner with Global Brands
           </h3>
-          <p className="font-dm-sans text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="font-dm-sans text-gray-600 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
             Access premium international brands through our established supply chains. 
             From sourcing to distribution across Africa.
           </p>
@@ -363,11 +364,12 @@ const OtherBrands = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Button 
-              className="bg-[#7a1010] hover:bg-[#7a1010]/90 text-white font-dm-sans font-semibold px-8 py-3 text-lg rounded-lg shadow-lg"
+              className="bg-[#7a1010] hover:bg-[#7a1010]/90 text-white font-dm-sans font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg shadow-lg w-full sm:w-auto"
             >
-              <span className="flex items-center gap-2">
-                Explore Partnership Opportunities
-                <ArrowRight className="w-5 h-5" />
+              <span className="flex items-center justify-center gap-2">
+                <span className="hidden sm:inline">Explore Partnership Opportunities</span>
+                <span className="sm:hidden">Partnership Opportunities</span>
+                <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
               </span>
             </Button>
           </motion.div>
