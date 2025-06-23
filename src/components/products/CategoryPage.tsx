@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
@@ -13,7 +12,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
   const categoryData = {
     commodities: {
       title: 'Basic Commodities',
-      description: 'Essential staples including sesame, flour, and sugar sourced from trusted global suppliers and our own cultivation.',
+      description: 'Essential staples, including sesame, flour, and sugar sourced from our own cultivation and trusted suppliers in Chad, Turkey, Egypt, and Brazil.',
       backgroundImage: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       products: [
         { name: 'Trillioni Sesame', origin: 'Chad', packaging: 'Bulk/Bags', image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
@@ -24,7 +23,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
     },
     beverages: {
       title: 'Beverages',
-      description: 'Premium refreshing beverages imported from Saudi Arabia and distributed across Chad to meet everyday refreshment needs.',
+      description: 'Premium refreshing beverages imported from Saudi Arabia and distributed across Chad and throughout Africa to meet everyday refreshment needs.',
       backgroundImage: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       products: [
         { name: 'Rani', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
@@ -34,7 +33,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
     },
     automotive: {
       title: 'Automotive Oils',
-      description: 'High-quality lubricants and automotive maintenance products manufactured in UAE, specifically formulated for African climates.',
+      description: 'High-quality lubricants and automotive maintenance products manufactured in the UAE, specifically formulated for African climates.',
       backgroundImage: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
       products: [
         { name: 'Trillioni Motor Engine Oil', origin: 'UAE', packaging: 'Bottles/Drums', image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80' },
@@ -43,7 +42,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
     },
     necessities: {
       title: 'Everyday Necessities',
-      description: 'Essential household products including cooking oils and pasta from top producers in Egypt, Libya, and Malaysia.',
+      description: 'Essential household products, including cooking oils and pasta from top producers in Egypt, Libya, and Malaysia.',
       backgroundImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       products: [
         { name: 'Almosim Pasta', origin: 'Egypt', packaging: 'Boxes', image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
