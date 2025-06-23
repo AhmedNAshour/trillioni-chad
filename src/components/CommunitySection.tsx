@@ -24,9 +24,12 @@ const CommunitySection = () => {
 
           {/* Text Content */}
           <div>
-            <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-6">
+            <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-3">
               Beyond Business
             </h2>
+            <h3 className="font-dm-sans text-xl text-gray-700 mb-6 font-medium">
+              Our Commitment to Community
+            </h3>
             <p className="font-dm-sans text-lg text-gray-600 mb-6 leading-relaxed">
               At Trillioni Chad, we go beyond business by investing in health initiatives, education, 
               youth sports, and community development.
