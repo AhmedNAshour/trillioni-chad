@@ -24,7 +24,7 @@ const PartnersSection = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
-            Global brands who rely on Trillioni Chad for their distribution needs across Africa
+            Global brands that rely on Trillioni Chad for their distribution needs across Africa and beyond
           </p>
         </div>
 
