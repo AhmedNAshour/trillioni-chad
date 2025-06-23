@@ -1,8 +1,4 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 const ProductsSection = () => {
   const productCategories = [
@@ -21,7 +17,7 @@ const ProductsSection = () => {
     {
       title: 'Everyday Necessities',
       description: 'Household essentials for daily life and comfort',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad6d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       link: '/products/necessities'
     },
     {
@@ -36,47 +32,48 @@ const ProductsSection = () => {
     <section id="products" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-            Our Products – Designed for Everyday Life
+          <h2 className="font-bold text-3xl sm:text-4xl text-gray-900 mb-2">
+            Our Products
           </h2>
-          <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
-            From beverages to automotive oils, we deliver quality products that meet the diverse needs of African communities
+          <h3 className="text-xl text-gray-700 mb-4">
+            Designed for Everyday Life
+          </h3>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            From premium commodities and beverages to everyday necessities and automotive solutions. Each product in our collection meets international quality standards and is designed to excel in diverse markets and climates.
           </p>
         </div>
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {productCategories.map((category, index) => (
-            <Link key={category.title} to={category.link}>
-              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer h-full">
+            <div key={category.title} className="cursor-pointer">
+              <div className="group hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer h-full bg-white rounded-lg border border-gray-200">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={category.image}
                     alt={category.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/30 transition-colors duration-300"></div>
+                  <div className="absolute inset-0 bg-blue-900/20 group-hover:bg-blue-900/30 transition-colors duration-300"></div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-poppins font-semibold text-xl text-gray-900 mb-3">
+                <div className="p-6">
+                  <h3 className="font-semibold text-xl text-gray-900 mb-3">
                     {category.title}
                   </h3>
-                  <p className="font-dm-sans text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {category.description}
                   </p>
-                </CardContent>
-              </Card>
-            </Link>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center">
-          <Link to="/contact">
-            <Button className="bg-primary hover:bg-primary/90 text-white font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300">
-              Contact Us for Inquiries
-            </Button>
-          </Link>
+          <button className="bg-blue-900 hover:bg-blue-800 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+            Contact Us for Inquiries
+          </button>
         </div>
       </div>
     </section>
