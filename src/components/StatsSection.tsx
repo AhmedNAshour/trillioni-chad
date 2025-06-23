@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 
 const StatsSection = () => {
@@ -13,8 +12,7 @@ const StatsSection = () => {
     liters: 0
   });
   
-  const sectionRef = useRef<HTMLDivElement>(null);
-
+  const sectionRef = useRef(null);
   const finalValues = {
     countries: 10,
     partners: 15,
@@ -46,12 +44,12 @@ const StatsSection = () => {
       const duration = 2000; // 2 seconds
       const steps = 60;
       const stepDuration = duration / steps;
-
       let currentStep = 0;
+
       const timer = setInterval(() => {
         currentStep++;
         const progress = currentStep / steps;
-
+        
         setCounters({
           countries: Math.floor(finalValues.countries * progress),
           partners: Math.floor(finalValues.partners * progress),
@@ -64,7 +62,7 @@ const StatsSection = () => {
         if (currentStep >= steps) {
           clearInterval(timer);
           setCounters(finalValues);
-          setHasAnimated(true); // Set hasAnimated only after animation completes
+          setHasAnimated(true);
         }
       }, stepDuration);
 
@@ -72,7 +70,7 @@ const StatsSection = () => {
     }
   }, [isVisible, hasAnimated]);
 
-  const formatNumber = (num: number) => {
+  const formatNumber = (num) => {
     return new Intl.NumberFormat().format(num);
   };
 
@@ -86,28 +84,30 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 bg-primary text-white">
+    <section ref={sectionRef} className="py-16 bg-blue-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl mb-4">
+          <h2 className="font-bold text-3xl sm:text-4xl mb-4">
             Powering Growth
           </h2>
-          <p className="font-dm-sans text-lg opacity-90">
+          <p className="text-lg opacity-90">
             Our impact in numbers
           </p>
         </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="text-center transform transition-all duration-300 hover:scale-105 px-2"
+              className="text-center transform transition-all duration-300 hover:scale-105 min-w-0"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="font-poppins font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-2 text-accent break-words">
-                {formatNumber(stat.value)}{stat.suffix}
+              <div className="font-bold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl mb-2 text-yellow-400 whitespace-nowrap overflow-hidden">
+                <span className="inline-block">
+                  {formatNumber(stat.value)}{stat.suffix}
+                </span>
               </div>
-              <div className="font-dm-sans text-xs sm:text-sm lg:text-base opacity-90 break-words">
+              <div className="text-xs sm:text-sm lg:text-base opacity-90">
                 {stat.label}
               </div>
             </div>
