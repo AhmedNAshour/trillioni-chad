@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -33,20 +32,19 @@ const About = () => {
               <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 font-dm-sans text-gray-600 text-lg leading-relaxed">
                 <p>
-                  Founded in 2020 as the commercial arm of the Trillioni Group, Trillioni Chad 
-                  emerged from a vision to transform the distribution landscape across Africa. 
-                  What began as an ambitious initiative has evolved into a trusted partner for 
-                  premium consumer goods across the continent.
+                  Trillioni Chad, established in 2020 as part of the Trillioni Group, is the commercial arm driving the distribution of high-quality consumer goods across Africa and beyond.
                 </p>
                 <p>
-                  From our headquarters in N'Djamena, we've built a network that spans over 10 
-                  countries, connecting global brands with local markets and empowering communities 
-                  through reliable access to quality products.
+                  We began our journey by exporting premium sesame cultivated in Chad to international markets. As demand for high-quality food staples grew, we moved further into value-added production — processing wheat in Egypt and Turkey and introducing Trillioni Flour to meet local and regional needs.
                 </p>
                 <p>
-                  Our journey is one of continuous growth, driven by our commitment to excellence 
-                  and our belief that every community deserves access to the essentials that 
-                  improve daily life.
+                  This natural progression laid the groundwork for expanding our product line under the Trillioni brand, including Trillioni Sugar sourced from Brazil and Trillioni Automotive Oils, manufactured in the UAE to deliver performance and reliability across the region.
+                </p>
+                <p>
+                  With a strong product base under our own brand, we then partnered with leading manufacturers to distribute globally recognized names — including beverages like Barbican, Rani Juice, and Hub, along with a growing range of essential household goods.
+                </p>
+                <p>
+                  Our story is one of agility, purpose, and partnership — empowering communities, earning trust, and innovating to serve the daily lives of families, youth, and businesses.
                 </p>
               </div>
             </div>
@@ -82,9 +80,7 @@ const About = () => {
               </div>
               <h3 className="font-poppins font-semibold text-2xl text-gray-900 mb-4">Our Vision</h3>
               <p className="font-dm-sans text-gray-600 leading-relaxed">
-                To be the leading distribution partner across Africa, creating sustainable 
-                connections between global excellence and local communities while driving 
-                economic growth and prosperity throughout the continent.
+                To be the leading distribution partner across Africa and beyond, recognized for our commitment to quality, community empowerment, and reliable supply chains that uplift societies.
               </p>
             </div>
 
@@ -94,9 +90,7 @@ const About = () => {
               </div>
               <h3 className="font-poppins font-semibold text-2xl text-gray-900 mb-4">Our Mission</h3>
               <p className="font-dm-sans text-gray-600 leading-relaxed">
-                To import, export, and distribute premium consumer goods with unwavering 
-                commitment to quality, reliability, and community impact. We bridge markets, 
-                empower partners, and deliver essentials that enhance daily life across Africa.
+                To enrich the lives of Chadian communities by providing high-quality, trusted products while fostering sustainable growth, innovation, and community development across Africa and beyond.
               </p>
             </div>
           </div>
@@ -122,20 +116,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 font-dm-sans text-gray-600 text-lg leading-relaxed">
                 <p>
-                  As the commercial arm of the Trillioni Group, Trillioni Chad serves as the 
-                  bridge between our parent company's strategic vision and market execution. 
-                  We translate innovation into action, bringing world-class products to 
-                  communities across Africa.
+                  Trillioni Chad acts as Trillioni Group's main commercial and distribution arm in Africa, serving as the bridge between our parent company's strategic vision and market execution. We facilitate both the import and export of goods to and from African markets, translating innovation into action.
                 </p>
                 <p>
-                  Our role extends beyond traditional distribution. We are market makers, 
-                  relationship builders, and growth catalysts, ensuring that the Trillioni 
-                  Group's commitment to excellence reaches every corner of our operational territory.
+                  From commodities, everyday essentials, and beverages to automotive oils, we lead large-scale warehousing and distribution operations with precision. Our role extends beyond traditional distribution — we are market makers, relationship builders, and growth catalysts.
                 </p>
                 <p>
-                  Through our extensive network and deep market understanding, we enable the 
-                  Trillioni Group to maintain its position as a trusted partner for 
-                  international brands seeking African market entry and expansion.
+                  As a key player in the Group's strategic expansion, Trillioni Chad operates as both a gateway into Africa for global partners and a launchpad for African products to reach international markets. Through our extensive network and deep market understanding, we set the standard for sustainable growth and meaningful social impact while ensuring that the Trillioni Group's commitment to excellence reaches every corner of our operational territory.
                 </p>
               </div>
             </div>
@@ -153,14 +140,14 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
-              <h3 className="font-poppins font-semibold text-xl mb-3">Excellence</h3>
+              <h3 className="font-poppins font-semibold text-xl mb-3">Community First</h3>
               <p className="font-dm-sans text-sm opacity-90">
-                We pursue the highest standards in everything we do, from product selection to customer service.
+                Supporting education, youth development, and health initiatives to create a brighter future.
               </p>
             </div>
 
@@ -168,9 +155,19 @@ const About = () => {
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
-              <h3 className="font-poppins font-semibold text-xl mb-3">Integrity</h3>
+              <h3 className="font-poppins font-semibold text-xl mb-3">Quality Excellence</h3>
               <p className="font-dm-sans text-sm opacity-90">
-                Honesty and transparency form the foundation of all our business relationships.
+                Delivering trusted, globally recognized products that meet the highest standards.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
+                <div className="w-8 h-8 bg-white rounded-full"></div>
+              </div>
+              <h3 className="font-poppins font-semibold text-xl mb-3">Reliability</h3>
+              <p className="font-dm-sans text-sm opacity-90">
+                Ensuring consistent and dependable access to essential goods.
               </p>
             </div>
 
@@ -180,7 +177,7 @@ const About = () => {
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Innovation</h3>
               <p className="font-dm-sans text-sm opacity-90">
-                We embrace new ideas and technologies to improve our services and create value.
+                Embracing progress to improve products, services, and impact.
               </p>
             </div>
 
@@ -188,9 +185,9 @@ const About = () => {
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
-              <h3 className="font-poppins font-semibold text-xl mb-3">Community</h3>
+              <h3 className="font-poppins font-semibold text-xl mb-3">Sustainability</h3>
               <p className="font-dm-sans text-sm opacity-90">
-                We are committed to the growth and prosperity of the communities we serve.
+                Operating responsibly with practices that benefit people and the planet.
               </p>
             </div>
           </div>

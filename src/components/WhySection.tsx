@@ -36,7 +36,7 @@ const WhySection = () => {
             Why Trillioni Chad
           </h2>
           <p className="font-dm-sans text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover what sets us apart in the African logistics and distribution landscape
+            Discover what sets us apart in the regional logistics and distribution landscape
           </p>
         </div>
 
