@@ -93,7 +93,7 @@ const StatsSection = () => {
             Powering Growth
           </h2>
           <p className="font-dm-sans text-lg opacity-90">
-            Our impact across Africa in numbers
+            Our impact in numbers
           </p>
         </div>
 
