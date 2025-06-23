@@ -84,13 +84,13 @@ const StatsSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 bg-blue-900 text-white">
+    <section ref={sectionRef} className="py-16 bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-bold text-3xl sm:text-4xl mb-4">
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl mb-4">
             Powering Growth
           </h2>
-          <p className="text-lg opacity-90">
+          <p className="font-dm-sans text-lg opacity-90">
             Our impact in numbers
           </p>
         </div>
@@ -102,12 +102,12 @@ const StatsSection = () => {
               className="text-center transform transition-all duration-300 hover:scale-105 min-w-0"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="font-bold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl mb-2 text-yellow-400 whitespace-nowrap overflow-hidden">
+              <div className="font-poppins font-bold text-2xl sm:text-3xl lg:text-2xl xl:text-3xl mb-2 text-accent whitespace-nowrap overflow-hidden">
                 <span className="inline-block">
                   {formatNumber(stat.value)}{stat.suffix}
                 </span>
               </div>
-              <div className="text-xs sm:text-sm lg:text-base opacity-90">
+              <div className="font-dm-sans text-xs sm:text-sm lg:text-base opacity-90">
                 {stat.label}
               </div>
             </div>
