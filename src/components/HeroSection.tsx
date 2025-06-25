@@ -39,14 +39,7 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
         
-        {/* Mobile fallback image - shown when video might not play well on mobile */}
-        <div className="absolute inset-0 md:hidden">
-          <img
-            src="/about/role-in-trillioni-group.JPG"
-            alt="Trillioni Chad operations"
-            className="w-full h-full object-cover"
-          />
-        </div>
+
 
         {/* Static Transparent Overlay for Better Text Visibility */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#7a1010]/60 via-[#7a1010]/50 to-[#7a1010]/60" />
@@ -64,16 +57,16 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
-            Logistics{' '}
+            Connecting{' '}
             <motion.span
               className="inline-block bg-gradient-to-r from-white to-[#dfdfdf] bg-clip-text text-transparent"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             >
-              without
+              markets
             </motion.span>
-            {' '}Limits
+            {' '}across Africa
           </motion.h1>
         </div>
 
@@ -85,14 +78,15 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <p className="font-dm-sans text-lg sm:text-xl lg:text-2xl opacity-90 leading-relaxed">
-            Driving growth, delivering{' '}
+            Leading distribution partner delivering{' '}
+            <br className="hidden sm:block" />
             <motion.span
               className="inline-block font-semibold text-[#dfdfdf]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
-              Essentials, and empowering communities across Africa and beyond.
+              trusted products to communities that matter
             </motion.span>
           </p>
         </motion.div>
