@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -15,9 +14,9 @@ const Partnerships = () => {
     <div className="min-h-screen">
       <Navigation />
       <PartnershipHero />
+      <PartnersSection />
       <PartnershipTypes />
       <WhyPartnerSection />
-      <PartnersSection />
       <PartnershipProcess />
       <LogisticsCapabilities />
       <PartnershipCTA />

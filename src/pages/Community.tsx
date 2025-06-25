@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -7,15 +6,17 @@ import ImpactPillars from '@/components/ImpactPillars';
 import CommunityTestimonial from '@/components/CommunityTestimonial';
 import CommunityGallery from '@/components/CommunityGallery';
 import CommunityCallToAction from '@/components/CommunityCallToAction';
+import CommunityGrowTogetherCTA from '@/components/CommunityGrowTogetherCTA';
 
 const Community = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <CommunityHero />
+      <CommunityGallery />
       <ImpactPillars />
       <CommunityTestimonial />
-      <CommunityGallery />
+      <CommunityGrowTogetherCTA />
       <CommunityCallToAction />
       <Footer />
     </div>

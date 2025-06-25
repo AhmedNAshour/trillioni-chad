@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -12,8 +11,8 @@ const PartnershipHero = () => {
             Partnership Opportunities
           </h1>
           <p className="font-dm-sans text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Join forces with Trillioni Chad to expand your reach across Africa. 
-            We provide strategic import/export guidance, local expertise, and end-to-end logistics support.
+            Partner with Trillioni Chad to grow your presence across the region. We offer strategic 
+            import/export guidance, deep local expertise, and seamless logistics support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">

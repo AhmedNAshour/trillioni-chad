@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const CommunityHero = () => {
@@ -33,10 +32,10 @@ const CommunityHero = () => {
       {/* Text Overlay */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl mb-6 animate-fade-in">
-          Community Impact
+          Impact That Goes Beyond Trade
         </h1>
         <p className="font-dm-sans text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90 animate-fade-in animation-delay-300">
-          We believe that real growth is measured not by markets — but by the lives we uplift.
+          Real growth is measured not just by profits, but by the lives we uplift along the way.
         </p>
       </div>
     </section>

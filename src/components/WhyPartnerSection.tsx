@@ -1,6 +1,7 @@
-
 import React from 'react';
 import { Shield, Target, Globe, Users, Truck } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const WhyPartnerSection = () => {
   const whyPartner = [
@@ -56,7 +57,7 @@ const WhyPartnerSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {whyPartner.map((reason, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-lg mx-auto mb-4 flex items-center justify-center shadow-md">
@@ -70,6 +71,15 @@ const WhyPartnerSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <Link to="/contact">
+            <Button className="bg-accent hover:bg-accent/90 text-primary font-dm-sans font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg">
+              Become a Partner
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
