@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -28,10 +29,22 @@ const About = () => {
       {/* Our Story Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-6">Our Story</h2>
-              <div className="space-y-4 font-dm-sans text-gray-600 text-lg leading-relaxed">
+          <div className="text-center mb-12">
+            <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-6">Our Story</h2>
+            <div className="relative max-w-4xl mx-auto mb-12">
+              <img
+                src="/about/our-story.png"
+                alt="Trillioni Chad operations"
+                className="w-full h-80 object-cover rounded-lg shadow-xl"
+              />
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-accent rounded-lg opacity-20"></div>
+              <div className="absolute -top-6 -right-6 w-16 h-16 bg-primary rounded-lg opacity-20"></div>
+            </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-dm-sans text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-6">
                 <p>
                   Trillioni Chad, established in 2020 as part of the Trillioni Group, is the commercial arm driving the distribution of high-quality consumer goods across Africa and beyond.
                 </p>
@@ -41,22 +54,21 @@ const About = () => {
                 <p>
                   This natural progression laid the groundwork for expanding our product line under the Trillioni brand, including Trillioni Sugar sourced from Brazil and Trillioni Automotive Oils, manufactured in the UAE to deliver performance and reliability across the region.
                 </p>
+              </div>
+              <div className="space-y-6">
                 <p>
                   With a strong product base under our own brand, we then partnered with leading manufacturers to distribute globally recognized names — including beverages like Barbican, Rani Juice, and Hub, along with a growing range of essential household goods.
                 </p>
                 <p>
-                  Our story is one of agility, purpose, and partnership — empowering communities, earning trust, and innovating to serve the daily lives of families, youth, and businesses.
+                  Our story is one of agility, purpose, and partnership — empowering communities, earning trust, and innovating to serve the daily lives of families, youth, and businesses across Africa and beyond.
                 </p>
+                <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 rounded-lg border-l-4 border-primary">
+                  <p className="font-semibold text-primary mb-2">Our Journey Continues</p>
+                  <p className="text-base">
+                    Every step forward is guided by our commitment to quality, community, and sustainable growth across the continent.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80"
-                alt="Trillioni Chad operations"
-                className="w-full h-96 object-cover rounded-lg shadow-xl"
-              />
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-accent rounded-lg opacity-20"></div>
-              <div className="absolute -top-6 -right-6 w-16 h-16 bg-primary rounded-lg opacity-20"></div>
             </div>
           </div>
         </div>
@@ -104,7 +116,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2147&q=80"
+                src="/about/role-in-trillioni-group.JPG"
                 alt="Trillioni Group ecosystem"
                 className="w-full h-96 object-cover rounded-lg shadow-xl"
               />
