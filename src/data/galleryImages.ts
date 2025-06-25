@@ -30,11 +30,7 @@ export const galleryImages = [
     caption: "Educational materials distribution",
     category: "Education"
   },
-  {
-    src: "/community/community-7.JPG",
-    caption: "Youth leadership training",
-    category: "Youth Development"
-  },
+
   {
     src: "/community/community-9.JPG",
     caption: "Women's entrepreneurship program",
@@ -69,11 +65,6 @@ export const galleryImages = [
     src: "/community/community-15.JPG",
     caption: "Vocational training center",
     category: "Education"
-  },
-  {
-    src: "/community/community-video.gif",
-    caption: "Community impact in action",
-    category: "Family Empowerment"
   }
 ];
 
