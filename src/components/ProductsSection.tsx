@@ -23,7 +23,7 @@ const ProductsSection = () => {
     {
       title: 'Automotive Oils',
       description: 'High-quality lubricants and automotive maintenance products',
-      image: '/products/sugar.jpg', // Using sugar as placeholder - replace with actual automotive oil image if available
+      image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
       link: '/products/automotive'
     }
   ];

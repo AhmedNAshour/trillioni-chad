@@ -29,7 +29,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/about/our-story.png"
                 alt="Trillioni Chad operations"
                 className="w-full h-96 object-cover"
               />
