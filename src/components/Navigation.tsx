@@ -22,7 +22,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/990af97d-adce-46a6-ae5e-5246abd5d11b.png" 
+              src="/lovable-uploads/b8d11d2a-8e0d-49fa-9339-9bee8f274717.png" 
               alt="Trillioni Chad" 
               className="h-8 w-auto"
             />
