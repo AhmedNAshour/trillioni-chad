@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ClipboardCheck, FileText, Warehouse, Network } from 'lucide-react';
@@ -9,7 +8,7 @@ const LogisticsCapabilities = () => {
       icon: ClipboardCheck,
       title: "Customs Clearance",
       description: "Expert handling of all customs procedures and regulatory compliance",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/partnerships/customs-clearance.jpg"
     },
     {
       icon: FileText,
@@ -27,7 +26,7 @@ const LogisticsCapabilities = () => {
       icon: Network,
       title: "Distribution Networks",
       description: "Comprehensive last-mile delivery across multiple African markets",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/partnerships/distribution.jpg"
     }
   ];
 
