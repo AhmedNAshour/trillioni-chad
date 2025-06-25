@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -64,16 +65,16 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
-            Connecting{' '}
+            Logistics{' '}
             <motion.span
               className="inline-block bg-gradient-to-r from-white to-[#dfdfdf] bg-clip-text text-transparent"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             >
-              markets
+              without
             </motion.span>
-            {' '}across Africa
+            {' '}Limits
           </motion.h1>
         </div>
 
@@ -85,7 +86,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <p className="font-dm-sans text-lg sm:text-xl lg:text-2xl opacity-90 leading-relaxed">
-            Leading distribution partner delivering{' '}
+            Driving growth, delivering{' '}
             <br className="hidden sm:block" />
             <motion.span
               className="inline-block font-semibold text-[#dfdfdf]"
@@ -93,7 +94,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
-              trusted products to communities that matter
+              Essentials, and empowering communities across Africa and beyond.
             </motion.span>
           </p>
         </motion.div>
