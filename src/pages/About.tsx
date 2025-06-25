@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Users, Award, Shield, Lightbulb, Leaf } from 'lucide-react';
 
 const About = () => {
   return (
@@ -143,7 +144,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Community First</h3>
               <p className="font-dm-sans text-sm opacity-90">
@@ -153,7 +154,7 @@ const About = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+                <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Quality Excellence</h3>
               <p className="font-dm-sans text-sm opacity-90">
@@ -163,7 +164,7 @@ const About = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Reliability</h3>
               <p className="font-dm-sans text-sm opacity-90">
@@ -173,7 +174,7 @@ const About = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+                <Lightbulb className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Innovation</h3>
               <p className="font-dm-sans text-sm opacity-90">
@@ -183,7 +184,7 @@ const About = () => {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-accent rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+                <Leaf className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-poppins font-semibold text-xl mb-3">Sustainability</h3>
               <p className="font-dm-sans text-sm opacity-90">
