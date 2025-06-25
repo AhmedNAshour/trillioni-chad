@@ -12,7 +12,7 @@ const CommunitySection = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/community/community-13.jpeg"
+                src="/community/community-1.JPG"
                 alt="Community development"
                 className="w-full h-96 object-cover"
               />
