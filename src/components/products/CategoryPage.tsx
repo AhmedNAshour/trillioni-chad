@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
@@ -13,22 +14,22 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
     commodities: {
       title: 'Basic Commodities',
       description: 'Essential staples, including sesame, flour, and sugar sourced from our own cultivation and trusted suppliers in Chad, Turkey, Egypt, and Brazil.',
-      backgroundImage: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+      backgroundImage: '/products/flour.jpg',
       products: [
-        { name: 'Trillioni Sesame', origin: 'Chad', packaging: 'Bulk/Bags', image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Trillioni Turkish Flour', origin: 'Turkey', packaging: '25kg Bags', image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Trillioni Egyptian Flour', origin: 'Egypt', packaging: '25kg Bags', image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Trillioni Sugar', origin: 'Brazil', packaging: '50kg Bags', image: 'https://images.unsplash.com/photo-1582440863530-02e25b3324ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' }
+        { name: 'Trillioni Sesame', origin: 'Chad', packaging: 'Bulk/Bags', image: '/products/sesame.jpg' },
+        { name: 'Trillioni Turkish Flour', origin: 'Turkey', packaging: '25kg Bags', image: '/products/flour.jpg' },
+        { name: 'Trillioni Egyptian Flour', origin: 'Egypt', packaging: '25kg Bags', image: '/products/flour.jpg' },
+        { name: 'Trillioni Sugar', origin: 'Brazil', packaging: '50kg Bags', image: '/products/sugar.jpg' }
       ]
     },
     beverages: {
       title: 'Beverages',
       description: 'Premium refreshing beverages imported from Saudi Arabia and distributed across Chad and throughout Africa to meet everyday refreshment needs.',
-      backgroundImage: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+      backgroundImage: '/products/rani.webp',
       products: [
-        { name: 'Rani', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Barbican', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Hub', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' }
+        { name: 'Rani', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: '/products/rani.webp' },
+        { name: 'Barbican', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: '/products/barbican.avif' },
+        { name: 'Hub', origin: 'Saudi Arabia', packaging: 'Bottles/Cans', image: '/products/rani.jpeg' }
       ]
     },
     automotive: {
@@ -43,11 +44,11 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category }) => {
     necessities: {
       title: 'Everyday Necessities',
       description: 'Essential household products, including cooking oils and pasta from top producers in Egypt, Libya, and Malaysia.',
-      backgroundImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+      backgroundImage: '/products/tomato-paste.jpg',
       products: [
         { name: 'Almosim Pasta', origin: 'Egypt', packaging: 'Boxes', image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
         { name: 'Hayat Cooking Oil', origin: 'Malaysia', packaging: 'Bottles', image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' },
-        { name: 'Faragello Tomato Purée', origin: 'Libya', packaging: 'Cans', image: 'https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80' }
+        { name: 'Faragello Tomato Purée', origin: 'Libya', packaging: 'Cans', image: '/products/tomato-paste.jpg' }
       ]
     }
   };
