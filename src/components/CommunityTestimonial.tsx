@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -9,21 +8,24 @@ const CommunityTestimonial = () => {
       author: "Fatimé",
       role: "Community Beneficiary",
       location: "N'Djamena",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      initials: "F",
+      bgColor: "bg-blue-500"
     },
     {
       quote: "The youth football program has given our children hope and discipline. We see them growing into confident leaders.",
       author: "Abdoulaye",
       role: "Community Leader",
       location: "Farcha",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      initials: "A",
+      bgColor: "bg-green-500"
     },
     {
       quote: "The clinic support has been life-changing for our village. Basic healthcare is no longer a luxury but a reality.",
       author: "Aisha",
       role: "Local Nurse",
       location: "Rural Chad",
-      image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      initials: "A",
+      bgColor: "bg-purple-500"
     }
   ];
 
@@ -48,11 +50,10 @@ const CommunityTestimonial = () => {
         <Card className="border-none shadow-xl bg-gradient-to-br from-primary/5 to-accent/5">
           <CardContent className="p-8 md:p-12 text-center">
             <div className="mb-8">
-              <img
-                src={testimonials[currentTestimonial].image}
-                alt={testimonials[currentTestimonial].author}
-                className="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-lg"
-              />
+              {/* Avatar with initials */}
+              <div className={`w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold shadow-lg border-4 border-white ${testimonials[currentTestimonial].bgColor}`}>
+                {testimonials[currentTestimonial].initials}
+              </div>
               <blockquote className="font-dm-sans text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
                 "{testimonials[currentTestimonial].quote}"
               </blockquote>
