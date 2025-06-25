@@ -31,7 +31,7 @@ const OtherBrands = () => {
         certifications: ['Halal Certified', 'ISO 22000'],
         availability: 'Year-round',
         description: 'Premium non-alcoholic malt beverages, a leading brand in the Middle East market.',
-        image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+        image: '/products/barbican.avif'
       },
       {
         name: 'Rani',
@@ -44,7 +44,7 @@ const OtherBrands = () => {
         certifications: ['HACCP', 'Organic Options'],
         availability: 'High volume',
         description: 'A popular fruit juice brand known for its real fruit pieces and bold flavors.',
-        image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+        image: '/products/rani.webp'
       },
       {
         name: 'Hub',
@@ -57,7 +57,7 @@ const OtherBrands = () => {
         certifications: ['Family Safe', 'Quality Assured'],
         availability: 'Regular supply',
         description: 'A family-friendly beverage brand offering fruity refreshment for all ages.',
-        image: 'https://images.unsplash.com/photo-1622543925917-763c34c1a894?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+        image: '/products/rani.jpeg'
       }
     ],
     necessities: [
@@ -85,7 +85,7 @@ const OtherBrands = () => {
         certifications: ['Natural Processing', 'Export Standard'],
         availability: 'Seasonal peak supply',
         description: 'Rich, flavorful tomato purée made in Egypt by Faragalla Group — a trusted kitchen essential.',
-        image: 'https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
+        image: '/products/tomato-paste.jpg'
       },
       {
         name: 'Hayat Palm Olein Oil',
