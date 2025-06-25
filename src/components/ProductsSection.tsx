@@ -5,25 +5,25 @@ const ProductsSection = () => {
     {
       title: 'Beverages',
       description: 'Premium drinks and refreshments from trusted global brands',
-      image: '/home/Beverages.png',
+      image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       link: '/products/beverages'
     },
     {
       title: 'Basic Commodities',
       description: 'Essential goods including sesame, flour, and sugar',
-      image: '/products/flour.jpg',
+      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       link: '/products/commodities'
     },
     {
       title: 'Everyday Necessities',
       description: 'Household essentials for daily life and comfort',
-      image: '/home/Everyday-Necessities.jpeg',
+      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad6d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       link: '/products/necessities'
     },
     {
       title: 'Automotive Oils',
       description: 'High-quality lubricants and automotive maintenance products',
-      image: '/products/sugar.jpg', // Using sugar as placeholder - replace with actual automotive oil image if available
+      image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
       link: '/products/automotive'
     }
   ];

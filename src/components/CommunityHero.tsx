@@ -11,15 +11,15 @@ const CommunityHero = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          poster="/community/community-5.JPG"
+          poster="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
         >
-          <source src="/community/community-video.mp4" type="video/mp4" />
+          <source src="/community-video.mp4" type="video/mp4" />
         </video>
         
         {/* Mobile fallback image */}
         <div className="absolute inset-0 md:hidden">
           <img
-            src="/community/community-5.JPG"
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80"
             alt="Community development"
             className="w-full h-full object-cover"
           />

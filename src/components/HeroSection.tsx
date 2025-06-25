@@ -39,11 +39,10 @@ const Hero = () => {
           loop
           playsInline
           className="w-full h-full object-cover scale-110"
-          poster="/about/our-story.png"
+          poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
         >
           {/* Add your video file path here */}
-          <source src="/home/hero-video.mp4" type="video/mp4" />
-          <source src="/home/hero-video.webm" type="video/webm" />
+          <source src="/home-hero-video.mp4" type="video/mp4" />
           
           {/* Fallback image if video doesn't load */}
           Your browser does not support the video tag.
@@ -52,7 +51,7 @@ const Hero = () => {
         {/* Mobile fallback image - shown when video might not play well on mobile */}
         <div className="absolute inset-0 md:hidden">
           <img
-            src="/about/role-in-trillioni-group.JPG"
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="Trillioni Chad operations"
             className="w-full h-full object-cover scale-110"
           />

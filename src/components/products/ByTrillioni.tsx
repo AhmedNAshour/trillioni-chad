@@ -30,7 +30,7 @@ const ByTrillioni = () => {
       packaging: ['Bulk Orders', '25kg Bags', '50kg Bags'],
       certifications: ['Organic Certified', 'Export Quality'],
       availability: 'Year-round supply',
-      image: '/products/sesame.jpg',
+      image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       highlights: ['Direct from source', 'Premium grade', 'Global export']
     },
     {
@@ -43,7 +43,7 @@ const ByTrillioni = () => {
       packaging: ['25kg Bags', '50kg Bags', 'Bulk Orders'],
       certifications: ['Food Grade', 'ISO Certified'],
       availability: 'Consistent supply',
-      image: '/products/flour.jpg',
+      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       highlights: ['Premium wheat', 'Bakery grade', 'Trusted source']
     },
     {
@@ -56,7 +56,7 @@ const ByTrillioni = () => {
       packaging: ['25kg Bags', '50kg Bags', 'Bulk Orders'],
       certifications: ['Food Grade', 'Regional Quality'],
       availability: 'Consistent supply',
-      image: '/products/flour.jpg',
+      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       highlights: ['Regional processing', 'Versatile use', 'Consistent quality']
     },
     {
@@ -69,7 +69,7 @@ const ByTrillioni = () => {
       packaging: ['50kg Bags', 'Bulk Orders', 'Custom Packaging'],
       certifications: ['Food Grade', 'Refined Quality'],
       availability: 'High volume capacity',
-      image: '/products/sugar.jpg',
+      image: 'https://images.unsplash.com/photo-1582440863530-02e25b3324ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
       highlights: ['Brazilian origin', 'Refined quality', 'Bulk supply']
     },
     {
@@ -82,7 +82,7 @@ const ByTrillioni = () => {
       packaging: ['1L Bottles', '4L Containers', '20L Drums', '200L Drums'],
       certifications: ['API Certified', 'Climate Tested'],
       availability: 'Multi-grade options',
-      image: '/products/flour.jpg', // Using flour image as placeholder - replace with actual motor oil image if available
+      image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
       highlights: ['Climate adapted', 'Performance enhanced', 'Modern standards']
     },
     {
@@ -95,7 +95,7 @@ const ByTrillioni = () => {
       packaging: ['1L Bottles', '4L Containers', '20L Drums', '200L Drums'],
       certifications: ['Heavy Duty Certified', 'Commercial Grade'],
       availability: 'Industrial volumes',
-      image: '/products/sugar.jpg', // Using sugar image as placeholder - replace with actual diesel oil image if available
+      image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
       highlights: ['Heavy-duty', 'Commercial grade', 'Long-lasting']
     }
   ];

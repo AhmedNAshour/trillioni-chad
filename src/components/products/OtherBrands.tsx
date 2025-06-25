@@ -31,7 +31,7 @@ const OtherBrands = () => {
         certifications: ['Halal Certified', 'ISO 22000'],
         availability: 'Year-round',
         description: 'Premium non-alcoholic malt beverages, a leading brand in the Middle East market.',
-        image: '/products/barbican.avif'
+        image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
         name: 'Rani',
@@ -44,7 +44,7 @@ const OtherBrands = () => {
         certifications: ['HACCP', 'Organic Options'],
         availability: 'High volume',
         description: 'A popular fruit juice brand known for its real fruit pieces and bold flavors.',
-        image: '/products/rani.webp'
+        image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
         name: 'Hub',
@@ -57,7 +57,7 @@ const OtherBrands = () => {
         certifications: ['Family Safe', 'Quality Assured'],
         availability: 'Regular supply',
         description: 'A family-friendly beverage brand offering fruity refreshment for all ages.',
-        image: '/products/barbican.avif' // Using barbican image as Hub placeholder - similar beverage category
+        image: 'https://images.unsplash.com/photo-1622543925917-763c34c1a894?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       }
     ],
     necessities: [
@@ -72,7 +72,7 @@ const OtherBrands = () => {
         certifications: ['Food Grade', 'Export Quality'],
         availability: 'Consistent supply',
         description: 'Libyan-made pasta with high-quality grains and reliable texture for everyday cooking.',
-        image: '/products/flour.jpg' // Using flour image as pasta placeholder - similar grain-based product
+        image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
         name: 'Faragello Purée',
@@ -85,7 +85,7 @@ const OtherBrands = () => {
         certifications: ['Natural Processing', 'Export Standard'],
         availability: 'Seasonal peak supply',
         description: 'Rich, flavorful tomato purée made in Egypt by Faragalla Group — a trusted kitchen essential.',
-        image: '/products/tomato-paste.jpg'
+        image: 'https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
         name: 'Hayat Palm Olein Oil',
@@ -98,7 +98,7 @@ const OtherBrands = () => {
         certifications: ['MSPO Certified', 'Halal Certified'],
         availability: 'High volume capacity',
         description: 'Refined palm oil, produced by IFFCO, known for its versatility and clean flavor.',
-        image: '/products/sugar.jpg' // Using sugar image as cooking oil placeholder - similar kitchen commodity
+        image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       }
     ]
   };
