@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -19,8 +20,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="font-poppins font-bold text-xl text-primary">
-            Trillioni Chad
+          <Link to="/" className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/990af97d-adce-46a6-ae5e-5246abd5d11b.png" 
+              alt="Trillioni Chad" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
