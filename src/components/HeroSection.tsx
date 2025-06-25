@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -87,7 +86,6 @@ const Hero = () => {
         >
           <p className="font-dm-sans text-lg sm:text-xl lg:text-2xl opacity-90 leading-relaxed">
             Driving growth, delivering{' '}
-            <br className="hidden sm:block" />
             <motion.span
               className="inline-block font-semibold text-[#dfdfdf]"
               initial={{ opacity: 0 }}
