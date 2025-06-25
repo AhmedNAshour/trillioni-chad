@@ -57,7 +57,7 @@ const OtherBrands = () => {
         certifications: ['Family Safe', 'Quality Assured'],
         availability: 'Regular supply',
         description: 'A family-friendly beverage brand offering fruity refreshment for all ages.',
-        image: '/products/rani.jpeg'
+        image: '/lovable-uploads/545fe425-9bec-415c-963b-6d235e1efcc8.png'
       }
     ],
     necessities: [
