@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
-  const { scrollY } = useScroll();
-  
-  // Parallax transforms
-  const backgroundY = useTransform(scrollY, [0, 800], [0, -100]);
-  const textY = useTransform(scrollY, [0, 800], [0, -50]);
-  const overlayOpacity = useTransform(scrollY, [0, 400], [0.4, 0.7]);
 
   useEffect(() => {
     setMounted(true);
@@ -29,17 +23,14 @@ const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
-      <motion.div 
-        className="absolute inset-0 scale-110"
-        style={{ y: backgroundY }}
-      >
+      <div className="absolute inset-0">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover scale-110"
-          poster="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          className="w-full h-full object-cover"
+          poster="/about/our-story.png"
         >
           {/* Add your video file path here */}
           <source src="/home-hero-video.mp4" type="video/mp4" />
@@ -51,52 +42,19 @@ const Hero = () => {
         {/* Mobile fallback image - shown when video might not play well on mobile */}
         <div className="absolute inset-0 md:hidden">
           <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="/about/role-in-trillioni-group.JPG"
             alt="Trillioni Chad operations"
-            className="w-full h-full object-cover scale-110"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Dynamic Overlay */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-[#7a1010]/70 via-[#7a1010]/50 to-[#7a1010]/60"
-          style={{ opacity: overlayOpacity }}
-        />
-      </motion.div>
-
-      {/* Animated Geometric Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-[#dfdfdf]/10 rounded-lg"
-          animate={{
-            rotate: [0, -180, -360],
-            scale: [1, 0.8, 1],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        {/* Static Transparent Overlay for Better Text Visibility */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7a1010]/60 via-[#7a1010]/50 to-[#7a1010]/60" />
       </div>
 
       {/* Hero Content */}
       <motion.div 
         className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
-        style={{ y: textY }}
       >
         {/* Main Heading with Staggered Animation */}
         <div className="overflow-hidden mb-6">
