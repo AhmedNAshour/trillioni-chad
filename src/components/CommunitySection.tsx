@@ -14,7 +14,7 @@ const CommunitySection = () => {
               <img
                 src="/community/community-1.JPG"
                 alt="Community development"
-                className="w-full h-96 object-cover"
+                className="w-full h-96 object-cover transform scale-x-[-1]"
               />
             </div>
             {/* Decorative elements */}
