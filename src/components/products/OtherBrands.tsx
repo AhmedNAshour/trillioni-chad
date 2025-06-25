@@ -39,11 +39,11 @@ const OtherBrands = () => {
         originFlag: '🇸🇦',
         category: 'Beverages',
         established: '1970',
-        specialties: ['Fruit Juices', 'Nectar', 'Natural Flavors'],
+        specialties: ['Fruit Juices', 'Real Fruit Pieces', 'Bold Flavors'],
         packaging: ['200ml Tetra Pak', '1L Bottles'],
         certifications: ['HACCP', 'Organic Options'],
         availability: 'High volume',
-        description: 'Natural fruit juices and nectars, trusted across the Middle East and Africa.',
+        description: 'A popular fruit juice brand known for its real fruit pieces and bold flavors.',
         image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
@@ -52,72 +52,72 @@ const OtherBrands = () => {
         originFlag: '🇸🇦',
         category: 'Beverages',
         established: '2010',
-        specialties: ['Energy Drinks', 'Sports Nutrition', 'Functional Beverages'],
+        specialties: ['Family-Friendly', 'Fruity Refreshment', 'All Ages'],
         packaging: ['250ml Cans', '500ml Bottles'],
-        certifications: ['Energy Drink Standard', 'Quality Assured'],
+        certifications: ['Family Safe', 'Quality Assured'],
         availability: 'Regular supply',
-        description: 'Modern energy and functional beverages for active lifestyles.',
+        description: 'A family-friendly beverage brand offering fruity refreshment for all ages.',
         image: 'https://images.unsplash.com/photo-1622543925917-763c34c1a894?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       }
     ],
-    food: [
+    necessities: [
       {
         name: 'Almosim Pasta',
-        origin: 'Egypt',
-        originFlag: '🇪🇬',
-        category: 'Food Essentials',
+        origin: 'Libya',
+        originFlag: '🇱🇾',
+        category: 'Everyday Necessities',
         established: '1995',
-        specialties: ['Durum Wheat Pasta', 'Various Shapes', 'Premium Quality'],
+        specialties: ['High-Quality Grains', 'Reliable Texture', 'Everyday Cooking'],
         packaging: ['400g Boxes', '1kg Bags'],
         certifications: ['Food Grade', 'Export Quality'],
         availability: 'Consistent supply',
-        description: 'High-quality pasta made from premium durum wheat, perfect for African markets.',
+        description: 'Libyan-made pasta with high-quality grains and reliable texture for everyday cooking.',
         image: 'https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
         name: 'Faragello Purée',
-        origin: 'Libya',
-        originFlag: '🇱🇾',
-        category: 'Food Essentials',
+        origin: 'Egypt',
+        originFlag: '🇪🇬',
+        category: 'Everyday Necessities',
         established: '1988',
-        specialties: ['Tomato Purée', 'Tomato Paste', 'Natural Processing'],
+        specialties: ['Rich Flavor', 'Egyptian Made', 'Kitchen Essential'],
         packaging: ['400g Cans', '800g Cans', '2.2kg Cans'],
         certifications: ['Natural Processing', 'Export Standard'],
         availability: 'Seasonal peak supply',
-        description: 'Premium tomato products from Libya\'s finest tomato growing regions.',
+        description: 'Rich, flavorful tomato purée made in Egypt by Faragalla Group — a trusted kitchen essential.',
         image: 'https://images.unsplash.com/photo-1546548970-71785318a17b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       },
       {
-        name: 'Hayat Cooking Oil',
+        name: 'Hayat Palm Olein Oil',
         origin: 'Malaysia/UAE',
         originFlag: '🇲🇾',
-        category: 'Food Essentials',
+        category: 'Everyday Necessities',
         established: '1982',
-        specialties: ['Palm Oil', 'Refined Oil', 'High Smoke Point'],
+        specialties: ['Refined Palm Oil', 'Versatile Use', 'Clean Flavor'],
         packaging: ['1L Bottles', '5L Containers', '18L Containers'],
         certifications: ['MSPO Certified', 'Halal Certified'],
         availability: 'High volume capacity',
-        description: 'Premium refined cooking oil, perfect for African culinary needs and climate.',
+        description: 'Refined palm oil, produced by IFFCO, known for its versatility and clean flavor.',
         image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80'
       }
     ]
   };
 
   const getAllBrands = () => {
-    return [...brandData.beverages, ...brandData.food];
+    return [...brandData.beverages, ...brandData.necessities];
   };
 
   const getFilteredBrands = () => {
     if (activeCategory === 'all') return getAllBrands();
     if (activeCategory === 'beverages') return brandData.beverages;
-    if (activeCategory === 'food') return brandData.food;
+    if (activeCategory === 'necessities') return brandData.necessities;
     return [];
   };
 
   const categories = [
     { id: 'all', label: 'All Brands', count: getAllBrands().length },
     { id: 'beverages', label: 'Beverages', count: brandData.beverages.length },
-    { id: 'food', label: 'Food Essentials', count: brandData.food.length }
+    { id: 'necessities', label: 'Everyday Necessities', count: brandData.necessities.length }
   ];
 
   const containerVariants = {
@@ -151,12 +151,11 @@ const OtherBrands = () => {
           viewport={{ once: true }}
         >
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-            Global Brands We{' '}
-            <span className="text-[#7a1010]">Bring to Africa</span>
+            Partner Brands:{' '}
+            <span className="text-[#7a1010]">Trusted Worldwide, Delivered Locally</span>
           </h2>
           <p className="font-dm-sans text-lg text-gray-600 max-w-3xl mx-auto">
-            Trusted partnerships with leading international brands — bridging continents 
-            and communities through reliable, quality products.
+            Discover globally trusted brands through strong partnerships, making international quality easily accessible.
           </p>
         </motion.div>
 
@@ -414,8 +413,8 @@ const OtherBrands = () => {
               className="bg-[#7a1010] hover:bg-[#7a1010]/90 text-white font-dm-sans font-semibold px-6 sm:px-8 py-3 text-base sm:text-lg rounded-lg shadow-lg w-full sm:w-auto"
             >
               <span className="flex items-center justify-center gap-2">
-                <span className="hidden sm:inline">Explore Partnership Opportunities</span>
-                <span className="sm:hidden">Partnership Opportunities</span>
+                <span className="hidden sm:inline">Become a Partner</span>
+                <span className="sm:hidden">Become a Partner</span>
                 <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
               </span>
             </Button>

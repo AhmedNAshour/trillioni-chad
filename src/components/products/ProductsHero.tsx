@@ -120,14 +120,14 @@ const ProductsHero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
-            Quality You Can{' '}
+            Products that meet{' '}
             <motion.span
               className="inline-block bg-gradient-to-r from-white to-[#dfdfdf] bg-clip-text text-transparent"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             >
-              Trust
+              all needs
             </motion.span>
           </motion.h1>
         </div>
@@ -140,7 +140,7 @@ const ProductsHero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <p className="font-dm-sans text-lg sm:text-xl lg:text-2xl opacity-90 leading-relaxed">
-            From Field to Shelf — Discover Trillioni Chad's portfolio of 
+            A portfolio built to serve every market, backed by the quality you can trust —
             <br className="hidden sm:block" />
             <motion.span
               className="inline-block font-semibold text-[#dfdfdf]"
@@ -148,7 +148,7 @@ const ProductsHero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
-              locally grown and globally sourced products
+              whether Trillioni-branded or globally sourced.
             </motion.span>
           </p>
         </motion.div>
@@ -161,9 +161,9 @@ const ProductsHero = () => {
           transition={{ duration: 0.6, delay: 1.0 }}
         >
           {[
-            { number: '4', label: 'Product Categories' },
-            { number: '10+', label: 'Global Suppliers' },
-            { number: '15+', label: 'Countries Served' },
+            { number: '24+', label: 'Products' },
+            { number: '14+', label: 'Partners' },
+            { number: '10+', label: 'Countries' },
           ].map((stat, index) => (
             <motion.div
               key={index}

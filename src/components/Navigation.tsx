@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
@@ -41,39 +40,9 @@ const Navigation = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-primary font-dm-sans bg-transparent">
+                  <Link to="/products" className="text-gray-700 hover:text-primary transition-colors font-dm-sans">
                     Products
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-48 p-2 bg-white">
-                      <NavigationMenuLink asChild>
-                        <Link to="/products" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded font-semibold">
-                          All Products
-                        </Link>
-                      </NavigationMenuLink>
-                      <div className="border-t border-gray-200 my-2"></div>
-                      <NavigationMenuLink asChild>
-                        <Link to="/products/beverages" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
-                          Beverages
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link to="/products/commodities" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
-                          Commodities
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link to="/products/necessities" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
-                          Everyday Necessities
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link to="/products/automotive" className="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
-                          Automotive Oils
-                        </Link>
-                      </NavigationMenuLink>
-                    </div>
-                  </NavigationMenuContent>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -118,16 +87,7 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <Link to="/" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">Home</Link>
               <Link to="/about" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">About</Link>
-              <div className="px-3 py-2">
-                <div className="text-gray-700 font-dm-sans mb-2">Products</div>
-                <div className="pl-4 space-y-1">
-                  <Link to="/products" className="block py-1 text-sm text-gray-600 hover:text-primary font-semibold">All Products</Link>
-                  <Link to="/products/beverages" className="block py-1 text-sm text-gray-600 hover:text-primary">Beverages</Link>
-                  <Link to="/products/commodities" className="block py-1 text-sm text-gray-600 hover:text-primary">Commodities</Link>
-                  <Link to="/products/necessities" className="block py-1 text-sm text-gray-600 hover:text-primary">Everyday Necessities</Link>
-                  <Link to="/products/automotive" className="block py-1 text-sm text-gray-600 hover:text-primary">Automotive Oils</Link>
-                </div>
-              </div>
+              <Link to="/products" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">Products</Link>
               <Link to="/partnerships" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">Partnerships</Link>
               <Link to="/community" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">Community</Link>
               <Link to="/contact" className="block px-3 py-2 text-gray-700 hover:text-primary font-dm-sans">Contact</Link>

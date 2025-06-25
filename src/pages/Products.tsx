@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 import ProductsHero from '@/components/products/ProductsHero';
 import ByTrillioni from '@/components/products/ByTrillioni';
 import OtherBrands from '@/components/products/OtherBrands';
-import CategoryGrid from '@/components/products/CategoryGrid';
 import CategoryPage from '@/components/products/CategoryPage';
 
 const Products = () => {
@@ -29,7 +28,6 @@ const Products = () => {
       <ProductsHero />
       <ByTrillioni />
       <OtherBrands />
-      <CategoryGrid />
       <Footer />
     </div>
   );

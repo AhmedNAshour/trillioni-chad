@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -37,7 +36,7 @@ const ByTrillioni = () => {
     {
       name: 'Trillioni Turkish Flour',
       shortName: 'Turkish Flour',
-      description: 'High-grade wheat flour sourced from premium Turkish wheat mills, perfect for bakeries, restaurants, and food manufacturers across Africa.',
+      description: 'High-quality flour made from Turkish wheat, milled to precision for bakeries, foodservice, and manufacturers seeking consistency and performance.',
       origin: 'Turkey',
       originFlag: '🇹🇷',
       category: 'Food Processing',
@@ -48,9 +47,22 @@ const ByTrillioni = () => {
       highlights: ['Premium wheat', 'Bakery grade', 'Trusted source']
     },
     {
+      name: 'Trillioni Egyptian Flour',
+      shortName: 'Egyptian Flour',
+      description: 'Premium wheat flour processed in Egypt to meet regional baking and production needs — offering consistency, versatility, and trusted quality.',
+      origin: 'Egypt',
+      originFlag: '🇪🇬',
+      category: 'Food Processing',
+      packaging: ['25kg Bags', '50kg Bags', 'Bulk Orders'],
+      certifications: ['Food Grade', 'Regional Quality'],
+      availability: 'Consistent supply',
+      image: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80',
+      highlights: ['Regional processing', 'Versatile use', 'Consistent quality']
+    },
+    {
       name: 'Trillioni Brazilian Sugar',
       shortName: 'Sugar',
-      description: 'Refined sugar imported from Brazil\'s top sugar producers, ensuring consistent quality and competitive pricing for your business needs.',
+      description: 'Premium refined sugar sourced from Brazil\'s top sugar producers, ensuring consistent quality and competitive pricing for manufacturers, retailers, and food service operations.',
       origin: 'Brazil',
       originFlag: '🇧🇷',
       category: 'Food Commodity',
@@ -61,9 +73,9 @@ const ByTrillioni = () => {
       highlights: ['Brazilian origin', 'Refined quality', 'Bulk supply']
     },
     {
-      name: 'Trillioni Engine Oils',
-      shortName: 'Engine Oils',
-      description: 'Premium automotive lubricants manufactured in UAE, specifically formulated for African climate conditions and vehicle requirements.',
+      name: 'Trillioni Motor Engine Oil',
+      shortName: 'Motor Oil',
+      description: 'A premium lubricant formulated in the UAE for gasoline engines — engineered to enhance performance, reduce wear, and meet modern vehicle standards across diverse climates.',
       origin: 'UAE',
       originFlag: '🇦🇪',
       category: 'Automotive Products',
@@ -71,7 +83,20 @@ const ByTrillioni = () => {
       certifications: ['API Certified', 'Climate Tested'],
       availability: 'Multi-grade options',
       image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
-      highlights: ['Climate adapted', 'Multi-grade', 'Professional quality']
+      highlights: ['Climate adapted', 'Performance enhanced', 'Modern standards']
+    },
+    {
+      name: 'Trillioni Diesel Engine Oil',
+      shortName: 'Diesel Oil',
+      description: 'Heavy-duty diesel oil developed for trucks, generators, and commercial machinery, delivering long-lasting engine protection and optimal efficiency in demanding environments.',
+      origin: 'UAE',
+      originFlag: '🇦🇪',
+      category: 'Automotive Products',
+      packaging: ['1L Bottles', '4L Containers', '20L Drums', '200L Drums'],
+      certifications: ['Heavy Duty Certified', 'Commercial Grade'],
+      availability: 'Industrial volumes',
+      image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2332&q=80',
+      highlights: ['Heavy-duty', 'Commercial grade', 'Long-lasting']
     }
   ];
 
@@ -111,12 +136,12 @@ const ByTrillioni = () => {
           viewport={{ once: true }}
         >
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-            From Our Fields to{' '}
-            <span className="text-[#7a1010]">Your Shelves</span>
+            By Trillioni Products:{' '}
+            <span className="text-[#7a1010]">Quality From Source to Shelf</span>
           </h2>
           <p className="font-dm-sans text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover our flagship "By Trillioni" products — quality you can trust, 
-            from cultivation and sourcing to delivery across Africa.
+            Explore our signature line – cultivated, manufactured, and distributed to African markets 
+            and beyond with uncompromising standards.
           </p>
         </motion.div>
 
